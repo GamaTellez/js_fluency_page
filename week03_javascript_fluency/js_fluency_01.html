@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheet_01.css">
+  <script  type="text/javascript" src="logic_01.js"></script>
+</head>
+
+<center>
+  <body>
+    
+    <div>
+      <h1>Loops</h1>
+        Enter a count: <input type="number" value="0" id="count" min="0" max="25"> 
+        . Enter a number to multiply them by <input type="number" id="multiplier" value="1" min="1" max="10">
+        <button onclick=multiply()>Multiply!</button>
+      <table id="loop_table">
+        <tr>
+            <th><h4>Value</h4></th>
+            <th><h4>Result</h4></th>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h1>Arrays</h1>
+      Enter item name: <input type="text" id="item_name">
+      <button onclick=save_item_to_array()>Save to array</button> 
+      <button onclick=clear_table()>Clear</button>
+      <table id="array_table">
+        <tr>
+          <th><h4>Index</h4></th>
+          <th><h4>Item name</h4></th>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h1>Associative Arrays</h1>
+      Enter item a friend's name: <input type="text" id="friend_name_input">
+      Enter the money your friend has: $ <input type="number" min="0" value="0" id="friend_money_input">
+      <button onclick="save_to_associative_array()"> Save </button>
+      <button onclick="clear_associative_array()"> Clear </button>
+      <table id="associative_array_table">
+        <tr>
+          <th><h3>Name</h3></th>
+          <th><h3>Money</h3></th>
+        </tr>
+      </table>
+
+    </div>
+
+
+
+  </body>
+</center>
+</html>
