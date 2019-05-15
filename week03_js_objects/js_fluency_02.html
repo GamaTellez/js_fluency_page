@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JS Objects</title>
+  <meta name="Gamaliel Tellez" content="">
+  <script type="text/javascript" src="logic_02.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <center>
+        <div>
+            <h1> Object creation using ES6 classes</h1>
+            Let's create a person object with these properties: 
+            <input type="text" placeholder="Name" id="person_name">
+            <input type="number" id="person_age" placeholder="Age">
+            <input type="text" id="person_favorite_color" placeholder="Favorite Color"> 
+            <button onclick="create_person()"> Create </button>
+            <h4 id="introduction"></h4>    
+        </div>
+
+        <div>
+            Let's create a Mexican Person that inherits all the Class Person properties and functions but also speaks spanish
+            <input type="text" placeholder="Name" id="mex_person_name">
+            <input type="number" id="mex_person_age" placeholder="Age"> 
+            <input type="text" id="mex_person_favorite_color" placeholder="Favorite Color"> 
+            <button onclick="create_mex_person()"> Create </button>
+            <h4 id="mex_introduction"></h4>
+            <h4 id="spanish_introduction"></h4>
+        </div>  
+
+        <div>
+            We can also create empty objects with a default constructor: 
+            <button onclick="create_default_person()"> Create default Person </button>
+            <h4 id="default_person_name"></h4>
+            <h4 id="default_person_age"></h4>
+            <h4 id="default_person_color"></h4>
+        </div>
+
+    </center>
+</body>
+
+</html>
