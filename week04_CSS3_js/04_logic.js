@@ -1,6 +1,5 @@
 var rotated = false;
 
-
 function random_color_generator() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -17,6 +16,7 @@ function random_color_generator() {
 function change_border_color() {
     var div = document.getElementById("div_example");
     div.style.borderColor = random_color_generator();
+
 }
 
 function change_background_color() {
@@ -57,8 +57,8 @@ function change_corners_radious() {
  *      - By Id <div id="the_one"></div>
  *             var the_one = document.getElementById("the_one"); equivalent to #the_one in css
  * 
- *      - By tag name <div tag="the_one"></div>
- *              var the_one = document.getElementByTagName("the_one");  
+ *      - By tag name <div></div>
+ *              var the_one = document.getElementByTagName("DIV");  
  * 
  *      - By class name <div class="the_one"></div>
  *              var the_one = document.getElementByClassName("the_one"");  equivalent to .the_one in css
