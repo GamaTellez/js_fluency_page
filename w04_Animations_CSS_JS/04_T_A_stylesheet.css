@@ -1,0 +1,19 @@
+.div_content {
+    margin-top: 30px;
+}
+
+#circle_div {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: blue;
+}
+
+#circle_div.horizontalTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    margin-left: 50% !important;
+}

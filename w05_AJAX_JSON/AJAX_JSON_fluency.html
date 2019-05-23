@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JSON_AJAX</title>
+    <script  type="text/javascript" src="AJAX_JSON_logic.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1 style="text-align:center">Requesting a JSON file with AJAX</h1>
+        <h3>We are going to use the <a href="https://api.kanye.rest"> Kenye.resy api </a> for testing purposes (forgive any bad language if any)</h3>
+        <p>This is what our endpoint looks like: </p>
+            <p style="color:blue" id="endpoint"> https://api.kanye.rest </p>
+         Click to get a quote----> <button onclick="get_quote()">Get Quote</button>
+         <p> This is what our JSON response looks like: </p>
+         <p style="color: red" id=response></p>
+        <p> But we can parse through the JSON object and only get the quote with JSON.parse(responseText).quote</p>
+        <p style="color:red" id="quote_only"></p>
+    </center>
+
+    <div>
+        
+    </div>
+
+</body>
+
+</html>
