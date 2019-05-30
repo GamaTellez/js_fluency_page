@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="video_sound_canvas_logic.js"></script>
+</head>
+
+<body onload="prep_canvas()">
+    <center>
+        <div>
+            <h1>HTML5 Tags - Video, Audio, and Canvas</h1>
+            <h2>Video</h2>
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/BwaU_ZqzL84"></iframe>
+        </div>
+        <div>
+            <h2>Audio</h2>
+            <h3>Dog sound</h3> 
+            <iframe width="500" height="50" src="https://drive.google.com/file/d/1qc6hOZPK8SJVd1Ls0L2eSsk_kVYho49u/preview"></iframe>
+            <h3>Rockets sound</h3> 
+            <iframe width="500" height="50" src="https://drive.google.com/file/d/1_N3lc3kURHO7_ar7NjvA0jS33DYqAfIE/preview"></iframe>
+        </div>
+        <div>
+            <h2>Canvas' primitive shapes (rect, arc and paths)</h2>
+            <canvas id="drawing_canvas" width="500px" height="300px" tabindex="0" style="border: 1px solid black"></canvas>
+        </div>
+
+        <div>
+            Rect and Arc--><select id="shape">
+                <option value="select">Select Shape</option>
+                <option value="circle">Circle</option>
+                <option value="rect">Rect</option>
+            </select>        
+            <select id="fill_style">
+                    <option value="select">Select Style</option>
+                    <option value="fill">Fill</option>
+                    <option value="stroke">Stroke</option>
+            </select>        
+            <button onclick="draw()">Draw</button>
+            <button onclick="clear_canvas()">Clear</button>
+        </div>
+
+        <div>
+            Paths--><button onclick="draw_point_at_random_location()">Draw random point</button>
+            <button onclick="connect_points()">Draw paths</button>
+        </div>
+    </center>    
+
+</body>
+
+</html>
