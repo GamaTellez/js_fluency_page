@@ -15,7 +15,7 @@ function random_color_generator() {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-  }
+}
 
 function prep_canvas() {
     drawing_canvas = document.getElementById("drawing_canvas");
@@ -62,12 +62,11 @@ function draw_point_at_random_location() {
 function connect_points() {
     if (points_count < 2 ) {
         alert("We need at least two points");
-        return
+        return;
     } 
     canvas_context.beginPath();
     canvas_context.moveTo(x_points_array[0], y_points_array[0]);//starting point
     for (i = 1; i < points_count; i++) {
-        
         canvas_context.lineTo(x_points_array[i], y_points_array[i]);
     } 
     canvas_context.closePath();

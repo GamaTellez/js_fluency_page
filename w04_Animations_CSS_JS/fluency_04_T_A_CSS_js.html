@@ -11,21 +11,24 @@
 </head>
 
 <body>
-    <center>
-        <div>
-
-            <div class="div_content">
-                <h2>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h2>
-                <div ="circle_div"></div>
-            </div>   
-
-            <div class="div_content">
-                <button id="circle_animation" onclick="animate_circle()">Start</button>
+        <center><h2>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h2></center>
+        <div class="outter_div">
+            <div class="inner_div">
+                <button id="demo_one_button">Hover over me</button>
             </div>
-            
-        </div>
+        </div>    
+    <div style="height: 1cm"></div>
+        <div class="outter_div">
+            <button id="toggle_button" onclick="toggle()"> Hide </button>
+            <div id="square_div" class="slide_in"></div>
+        </div>    
 
-    </center>
+        <div style="height: 1cm"></div>
+        <div class="outter_div">
+            <button id="toggle_button_two" onclick="toggle_two()"> Pause </button>
+            <div class="loader_div"></div>
+        </div>    
+
 </body>
 
 </html>
