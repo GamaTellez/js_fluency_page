@@ -16,13 +16,32 @@
             <button style="width: 200px" id="load_items" onclick="load_items()">Load items</button> <br><br>
         </center>
         
-        Enter something you would like to remember: <input id="item_to_save"type="text">
-        <button onclick="add_item()">Add item</button>
-        <h2>Items to remember</h2>
-        <ul id="items_to_remember_list"> 
-        </ul>        
-        <button style="background-color: green" onclick="save_list()">Save list</button>
-        <button style="background-color: red" onclick="forget_all()">Forget List</button>
+        <div style="background-color: aqua">
+            <h2>Let's create a list</h2>
+            Enter something you would like to remember: <input id="item_to_save"type="text">
+            <button onclick="add_item()">Add item</button>
+            <h2>Items to remember</h2>
+            <ul id="items_to_remember_list"></ul>        
+        </div>
+        
+
+        <div style="height: 50px "></div>
+
+        <div style="background-color: aqua">
+            <h2>Lets create a student</h2>
+            Enter your name: <input id="student_name" type="text"><br>
+            Enter your last name: <input id="student_last_name" type="text"><br>
+            Enter your Major: <input id="student_major" type="text"><br>
+            Enter a nickname: <input id="student_nickname" type="text"><br>
+            <button onclick="create_student()">Create student object</button>
+            <h2>Students</h2>
+            <ul id="students_list"></ul>        
+        </div>
+
+        <div style="height: 10px "></div>
+
+        <button style="background-color: green" onclick="save()">Save list</button>
+        <button style="background-color: red" onclick="forget()">Forget List</button>
 </body>
 
 </html>
