@@ -34,6 +34,7 @@ window.onload = function () {
         canvas_point_paragraph.innerHTML = "Mouse position in canvas: X: " + x_point + " Y: " + y_point;
 
         if (mouse_down) {
+            current_event_paragraph.innerHTML = "Current event: MOUSE MOVE AND DOWN";
             canvas_context.beginPath();
             canvas_context.moveTo(last_x, last_y);
             canvas_context.lineTo(x_point, y_point);
