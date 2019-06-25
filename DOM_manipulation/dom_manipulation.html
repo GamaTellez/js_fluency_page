@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <script src="dom_manipulation.js"></script>
+</head>
+
+<body><center>
+    <h1><center>DOM Manipulation</center></h1>
+
+        <h3>Select an element to create:</h3>
+        <div id="div_content_1">
+            <select id="element_select">
+                <option value="button">Button</option>
+                <option value="label">Label</option>
+                <option value="div">Div</option>
+                <option value="a">link</option>
+            </select>
+            Add some text to it: <input type="text" id="new_content">
+            <button id="create_element_button"> Create Element </button><br>
+            <div id="filling_div_1" style="height: 0px; width: 0px;"></div>
+            
+            <div style="height: 30px;"></div>
+        </div>
+        
+        <h3>Let's delete some rows...</h3>
+        
+        <table> 
+            <tr style="text-align: center">
+                <td>Remove row at index: <input id="index_selected" type="number" min="1" max="5"> <Button id="remove_row"> Remove </Button> </td> 
+            </tr>
+        </table>
+        <table id="names_table">
+            <tr>
+              <th>First name</th>
+              <th>Last name</th> 
+              <th>Age</th>
+            </tr>
+                <tr>
+                  <td>Jill</td>
+                  <td>Smith</td> 
+                  <td>50</td>
+                </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td> 
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Gamaliel</td>
+                <td>Tellez</td> 
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Ernesto</td>
+                <td>Tellez</td> 
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>Analy</td>
+                <td>Tellez</td> 
+                <td>37</td>
+            </tr>
+        </table>
+    
+    </center></body>
+</html>
