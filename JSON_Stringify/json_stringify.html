@@ -8,14 +8,81 @@
 
 <body>
     <center>
-        <h1>Using JSON</h1>
-        <h4> - JSON (JavaScript Object Notation) is a stantdard text-bases format for representing structured data based on JavaScript objet syntax"</h4>
-        <p> Let's create a family tree object that has </p>
-        <p> A grandma: <input type="text"> and a grandpa: <input type="text"></p>
-        
-            
-            <p id="raw_json_paragraph"></p>
-    </center>
+      <h1>Using JSON and stringify</h1>
+      Fill in all fields to create a JSON family tree from a father's side<br><br>
+
+    <table style="width: 200px" id="parents_info">
+
+      <h3>Parents</h3>
+      
+      <tr style="text-align: center">
+        <th>Father</th>
+        <th>Mother</th> 
+      </tr>
+      
+      <tr style="text-align: center">
+        <td><input id="father_name" type="text" placeholder="Name"></td> 
+        <td><input id="mother_name" type="text" placeholder="Name"></td> 
+      </tr>
+
+      <tr style="text-align: center">
+        <td><input id="father_last_name" type="text" placeholder="Last name"></td> 
+        <td><input id="mother_last_name" type="text" placeholder="Last name"></td> 
+      </tr>
+
+      <tr style="text-align: center">
+        <td><input id="father_age" type="number" placeholder="Age" min="18" ></td> 
+        <td><input id="mother_age" type="number" placeholder="Age" min="18"></td> 
+      </tr>
+
+      <tr style="text-align: center">
+        <td><button id="create_father_button">Create Father </button></td> 
+        <td><button id="create_mother_button">Create Mother </button></td> 
+      </tr>
+
+    </table>
+
+
+    <table style="width: 200px" id="parents_info">
+
+      <h3>Children</h3>
+      
+      <tr style="text-align: center">
+        <th>Son</th>
+        <th>Daughter</th> 
+      </tr>
+      
+      <tr style="text-align: center">
+        <td><input id="son_name" type="text" placeholder="Name"></td> 
+        <td><input id="daughter_name" type="text" placeholder="Name"></td> 
+      </tr>
+
+      <tr style="text-align: center">
+        <td><input id="son_age" type="number" placeholder="Age" min="0"></td> 
+        <td><input id="daughter_age" type="number" placeholder="Age" min="0"></td> 
+      </tr>
+
+      <tr style="text-align: center">
+        <td><button id="create_son_button">Add Son </button></td> 
+        <td><button id="create_daughter_button">Add Daughter </button></td> 
+      </tr>
+
+    </table>
+
+    <ul id="children_list">
+    </ul>
+    
+    <div style="text-align: justify">
+      <h3>Father object after JSON.stringify</h3>
+      <pre id="json_format_string"></pre><br>
+      <h3>Father object after JSON.parse</h3>
+      <p id="object_name"><p>
+      <p id="object_wife"><p>
+      <p id="object_sons"><p>
+      <p id="object_daughters"><p>
+    </div>
+    
+  </center>
 </body>
 
 </html>
