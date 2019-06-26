@@ -102,7 +102,7 @@ window.onload = function() {
             return;
         }
 
-        father.daughters.push(new Daughter(son_name, father.last_name));
+        father.daughters.push(new Daughter(daughter_name, father.last_name));
         document.getElementById("daughter_name").value = "";
         document.getElementById("daughter_age").value = "";
         print_json();
