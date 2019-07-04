@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="memory_game_style_sheet.css" rel="stylesheet" type="text/css">
+  <script src="memory_game_logic.js"></script>
+</head>
+
+<body id="background_body" onload="present_start_game_modal()">
+    <h1 style="text-align:center">CIT 261 Project: Memory Game</h1>
+    <center>
+        
+    </center>
+</body>
+</html>
+
+<!-- Modal Alert -->
+<div id="myModal" class="modal">
+        <div class="modal_content">
+            <center>
+            <div class="modal_header">
+                <h2>Thank you for playing my memory game</h2>
+            </div>
+              
+            <div class="modal_body">
+                <h4>Please select a user</h4>
+                <select id="select_user_select">
+                    <option value="select_player">Select player</option>
+                </select>
+                <h2>OR</h2>
+                <h4>Create a new player</h4>
+                <input placeholder="User name" type="text" id="new_player_input_name"><br>
+            </div>
+    
+            <div class="modal_footer">
+                <h2><button id="intro_button">Start playing </button></h2>
+            </div>
+            </center>    
+        </div>
+    </div>
