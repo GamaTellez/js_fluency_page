@@ -3,14 +3,15 @@
 
 <head>
   <link href="memory_game_style_sheet.css" rel="stylesheet" type="text/css">
-  <script src="memory_game_logic.js"></script>
+  <script src="data_model/player.js"></script>
+  <script src="modal_view.js"></script>
 </head>
 
 <body id="background_body" onload="present_start_game_modal()">
     <h1 style="text-align:center">CIT 261 Project: Memory Game</h1>
-    <center>
-        
-    </center>
+        <div>
+            <h2>Player: <h3 id="player_info"></h3></h2>
+        </div>
 </body>
 </html>
 
@@ -23,13 +24,20 @@
             </div>
               
             <div class="modal_body">
-                <h4>Please select a user</h4>
-                <select id="select_user_select">
-                    <option value="select_player">Select player</option>
-                </select>
-                <h2>OR</h2>
-                <h4>Create a new player</h4>
-                <input placeholder="User name" type="text" id="new_player_input_name"><br>
+                
+                <div id="select_player_div">
+                    <h4>Please select a player</h4>
+                    <select id="select_user_select">
+                        <option value="select_player">Select player</option>
+                        <option value="gama">Gama</option>
+                    </select>
+                </div>
+                
+                <div id="create_player_div">
+                    <h4>Or create a new player</h4>
+                    <input placeholder="User name" type="text" id="new_player_input"><br>
+                </div>
+            
             </div>
     
             <div class="modal_footer">
