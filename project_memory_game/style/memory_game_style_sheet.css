@@ -120,7 +120,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', e
   }
 
 /******************************************
- * fade in
+ * fade in fields in modal view
  ******************************************/
   #select_them_div {
     opacity: 10;
@@ -130,3 +130,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', e
   #select_them_div.fade_in {
     opacity: 1;
   }
+
+/******************************************
+ * game_card class 
+ ******************************************/
+ .card_front {
+  transition: transform .2s; 
+  padding: 30px;
+  width: 130px;
+  height: 130px;
+}
+
+.card_front:hover {
+  transform: scale(1.5);
+}

@@ -2,9 +2,12 @@
 <html>
 
 <head>
-  <link href="memory_game_style_sheet.css" rel="stylesheet" type="text/css">
+  <link href="style/memory_game_style_sheet.css" rel="stylesheet" type="text/css">
+  <script src="data_model/local_storage.js"></script>
   <script src="data_model/player.js"></script>
-  <script src="modal_view.js"></script>
+  <script src="data_model/card.js"></script>
+  <script src="logic/memory_game.js"></script>
+  <script src="logic/modal_view.js"></script>
 </head>
 
 <body id="background_body" onload="present_start_game_modal()">
@@ -12,6 +15,12 @@
         <div>
             <h2>Player: <h3 id="player_info"></h3></h2>
         </div>
+        <div>
+            <center><table id="memory_table" style="width: 80%; height: 80%;"></center>
+
+            </table>
+        </div>
+
 </body>
 </html>
 
@@ -27,9 +36,8 @@
                 
                 <div id="select_player_div">
                     <h4>Please select a player</h4>
-                    <select id="select_user_select">
+                    <select id="select_player">
                         <option value="select_player">Select player</option>
-                        <option value="gama">Gama</option>
                     </select>
                 </div>
                 
@@ -41,7 +49,7 @@
             </div>
     
             <div class="modal_footer">
-                <h2><button id="intro_button">Start playing </button></h2>
+                <h2><button id="intro_button">Next </button></h2>
             </div>
             </center>    
         </div>
