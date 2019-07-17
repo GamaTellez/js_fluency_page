@@ -1,15 +1,22 @@
 var cards = [];
-
+var cards_flipped = 0;
+var card_one = null;
+var image_one = null;
+var card_two = null;
+var image_two = null;
+var moves_count = 0;
+var pairs_found = 0;
+/******************************************
+ * sets up the memory game from modal view
+ ******************************************/
 function set_memory_table(images_urls) {
     var memory_table = document.getElementById("memory_table");
-    //to do is make copies of the array and randomize them.
     var row_count = 0;
     var cell_count = 0;
-
+    
     //duplicate image urls
     var total_cards = images_urls.length * 2;
     var index = 0;
-
     for (count = 0; count < total_cards; count++) {
         var new_card = new Card(images_urls[index], index);
         cards.push(new_card);
@@ -19,7 +26,6 @@ function set_memory_table(images_urls) {
             index++;
         }
     }
-
     //shuffle images in array
     card = shuffle_array(cards);
 
@@ -32,11 +38,10 @@ function set_memory_table(images_urls) {
                 var card_at_index = cards[i];
 
                 var td = document.createElement('td');
-                td.className = "card_cell";
                 
                 var image = document.createElement("IMG");
                 image.src = card_at_index.front_image_url;
-                image.className = "card_front";
+                image.className = "card";
                 td.appendChild(image);
                 
                 tr.appendChild(td);
@@ -68,30 +73,81 @@ function shuffle_array(array) {
     return array;
   }
 
-  function card_clicked(element) {
+
+/******************************************
+ * when user clicks on a card
+ ******************************************/
+  function card_clicked(element) {    
     var cell_index = element.cellIndex;
     var row_index = element.parentElement.rowIndex;
-    //console.log("row: " + row_index + "cell: " + cell_index);
     
+    var card_clicked = get_card_clicked(cell_index, row_index);
+    var image_clicked = document.getElementById('memory_table').rows[row_index].cells[cell_index].childNodes[0];
+    switch(cards_flipped) {
+        case 0:
+            card_one = card_clicked;
+            image_one = image_clicked;
+            image_clicked.src = card_clicked.back_image_url;
+            cards_flipped++;
+            break;
+        case 1:
+            card_two = card_clicked;
+            image_two = image_clicked;
+            image_clicked.src = card_clicked.back_image_url;
+            setTimeout(function() {
+                if (card_one.tag == card_two.tag) {
+                    alert("you found a pair!");
+                    pairs_found++;
+                    if (pairs_found == 8) {
+                        alert("Congratulations, you finished the game!");
+                    }
+                    cards_flipped = 0;
+                    card_one = null;
+                    card_two = null;
+                    image_one = null;
+                    image_two = null;
+                    return;
+                } else {
+                    image_one.src = card_one.front_image_url;
+                    image_two.src = card_two.front_image_url;
+                    cards_flipped = 0;
+                    card_one = null;
+                    card_two = null;
+                    image_one = null;
+                    image_two = null;
+                }
+            }, 500);
+            break;
+        default:
+            reset_values();
+            break;
+    }
+
+  }
+
+  function get_card_clicked(cell_index, row_index) {
     var index_of_card = 0;
     switch (row_index) {
         case 0:
             index_of_card = cell_index;
-        break;
+            break;
         case 1:
             index_of_card = cell_index + 4;
-        break;
+            break;
         case 2:
             index_of_card = cell_index + 8;
-        break;
+            break;
         case 3:
             index_of_card = cell_index + 12;
-        break;
+            break;
         default:
             break;
-    }
+    } 
+    return cards[index_of_card];
+  }
 
-    var card_clicked = cards[index_of_card];
-    var cell_clicked = document.getElementById('memory_table').rows[row_index].cells[cell_index].childNodes[0];
-    cell_clicked.src = card_clicked.back_image_url;
+  function reset_values() {
+    card_one = null;
+    card_two = null;
+    cards_flipped = 0;
   }
