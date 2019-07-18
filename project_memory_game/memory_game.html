@@ -13,7 +13,18 @@
 <body id="background_body" onload="present_start_game_modal()">
     <h1 style="text-align:center">CIT 261 Project: Memory Game</h1>
         <div>
-            <h2>Player: <h3 id="player_info"></h3></h2>
+            <table cellpadding="10">
+                <tr>
+                    <th>Player</th>
+                    <th>Moves</th>
+                    <th>Pairs Found</th>
+                </tr>
+                <tr align="center">
+                    <td id="player_name"></td>
+                    <td id="moves">0</td>
+                    <td id="pairs_found">0</td>
+                </tr>
+            </table>
         </div>
         <div>
             <center><table id="memory_table" style="width: 80%; height: 80%;"></center>
