@@ -92,7 +92,7 @@ function hide_unneeded_div(div_id_1, div_id_2) {
     modal_body.prepend(select_theme_div);
     
     //player name on main page
-    document.getElementById("player_info").innerHTML = current_player.name;
+    document.getElementById("player_name").innerHTML = current_player.name;
 
     //hide next button
     document.getElementById("intro_button").hidden = "true";

@@ -78,6 +78,10 @@ function shuffle_array(array) {
  * when user clicks on a card
  ******************************************/
   function card_clicked(element) {    
+    moves_count++;
+    if ((moves_count % 2) == 0) {
+        document.getElementById("moves").innerHTML = moves_count / 2;
+    }
     var cell_index = element.cellIndex;
     var row_index = element.parentElement.rowIndex;
     
@@ -96,10 +100,11 @@ function shuffle_array(array) {
             image_clicked.src = card_clicked.back_image_url;
             setTimeout(function() {
                 if (card_one.tag == card_two.tag) {
-                    alert("you found a pair!");
                     pairs_found++;
+                    current_player.games_played++;
+                    document.getElementById("pairs_found").innerHTML = pairs_found;
                     if (pairs_found == 8) {
-                        alert("Congratulations, you finished the game!");
+                        alert("Congratulations, you finished the game in " + moves_count / 2 + " moves");
                     }
                     cards_flipped = 0;
                     card_one = null;
@@ -116,7 +121,7 @@ function shuffle_array(array) {
                     image_one = null;
                     image_two = null;
                 }
-            }, 500);
+            }, 1000);
             break;
         default:
             reset_values();
