@@ -8,5 +8,6 @@ function save_player_in_local_storage(new_player) {
 }
 
 function get_saved_players() {
-    all_players = localStorage.getItem(player_key) ? JSON.parse(localStorage.getItem(player_key)) : null
+    all_players = localStorage.getItem(player_key) ? JSON.parse(localStorage.getItem(player_key)) : [];
+    //localStorage.removeItem(player_key);
 }
